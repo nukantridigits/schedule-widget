@@ -1,0 +1,21 @@
+@import '../../mixins&vars';
+
+#fitbase-widget {
+  &.desktop_sm {
+	.filters_reset_button {
+	  margin-left: -7px;
+
+	  .link_text {
+		font-size: 14px;
+		line-height: 14px;
+	  }
+	}
+  }
+
+  .filters_reset_button {
+	margin-left: auto;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 16px;
+  }
+}

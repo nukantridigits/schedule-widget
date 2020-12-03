@@ -1,0 +1,68 @@
+// Colors
+// -------------------------
+$black: #000;
+$white: #fff;
+$grayMainLight: #8f8f92;
+$dayItemBg: rgba(143,143,146,.1);
+$grayAdditionalLight: #b1aec4;
+$grayAdditionalBadgeLight: rgba(196, 196, 196, 0.2);
+$gray: #F2F2F2;
+$lightBlueLight: #F7F9FD;
+$bgLight: #f8f8f8;
+$blue: #3C67D6;
+$disabledBlue: #aebce0;
+$fuchsia: #FA2E69;
+$formBgLight: #F9FAFB;
+//Dark
+$bgDark: #1f2127;
+$cardBgDark: #343841;
+$calendarWrapperDark: #393c45;
+$countBagdeDark: #C4C4C4;
+$calendarInnerBgDark: #282b32;
+$modalHrDark: #333740;
+
+// Breakpoints
+// -------------------------
+$desktopWidth: 1140px;
+$desktopNormalWidth: 1320px;
+$tabWidth: 768px;
+$mediumPhoneWidth : 375px;
+
+@mixin smallDesktop {
+  @media (min-width: #{$desktopWidth}) and (max-width: #{$desktopNormalWidth - 1px}) {
+	@content;
+  }
+}
+
+@mixin smallMob {
+  @media (max-width: #{$mediumPhoneWidth - 1px}) {
+	@content;
+  }
+}
+
+@mixin mob {
+  @media (max-width: #{$tabWidth}) {
+	@content;
+  }
+}
+
+@mixin touch {
+  @media (max-width: #{$desktopWidth - 1px}) {
+	@content;
+  }
+}
+
+@mixin tab {
+  @media (min-width: #{$tabWidth}) and (max-width: #{$desktopWidth - 1px}) {
+	@content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktopWidth}) {
+	@content;
+  }
+}
+
+// VUE-transitions
+// -------------------------

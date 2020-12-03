@@ -1,0 +1,35 @@
+@import "../../../mixins&vars";
+
+#fitbase-widget {
+  &.dark {
+	.show_filters_button {
+	  &_label {
+		color: $white;
+	  }
+	  .icon_wrapper{
+		svg {
+		  path {
+			fill: $white;
+		  }
+		}
+	  }
+	}
+  }
+
+  .show_filters_button {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	&_label {
+	  font-weight: 500;
+	  font-size: 17px;
+	  line-height: 22px;
+	  margin-right: 14px;
+	  color: $blue;
+	}
+
+	.icon_wrapper {
+	  margin-top: 1px;
+	}
+  }
+}

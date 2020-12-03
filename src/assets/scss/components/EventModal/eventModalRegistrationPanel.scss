@@ -1,0 +1,119 @@
+@import "../../mixins&vars";
+
+#fitbase-widget {
+  &.touch {
+	.registration_form {
+	  &.is_booked{
+		width: 295px;
+		margin: 0 auto;
+	  }
+	  &_is_booked {
+		padding: 40px 0;
+	  }
+
+	  &_request {
+		padding: 30px;
+		display: block;
+	  }
+
+	  .slots {
+		text-align: center;
+		margin-bottom: 30px;
+	  }
+
+	  .caption {
+		text-align: center;
+
+		&.closed {
+		  padding: 30px;
+		}
+	  }
+	}
+  }
+
+  &.desktop {
+	.registration_form {
+	  height: 152px;
+
+	  &.short {
+		height: 91px;
+	  }
+
+	  &_right {
+		display: flex;
+	  }
+	}
+  }
+
+  .successBookingBg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+  }
+
+  .registration_form {
+	position: relative;
+	border-radius: 6px;
+	background-color: $formBgLight;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&_is_booked {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  position: relative;
+
+	  &_content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		z-index: 30;
+	  }
+
+	  .caption.lg {
+		&.lg {
+		  font-size: 25px;
+		  margin-bottom: 16px;
+		}
+	  }
+	}
+
+	&_request {
+	  display: flex;
+	  width: 100%;
+	  justify-content: space-between;
+	  padding: 0 50px;
+
+	  .caption {
+		margin-bottom: 6px;
+	  }
+
+	  .slots {
+		font-size: 15px;
+		line-height: 22px;
+		font-weight: 500;
+	  }
+	}
+
+	.caption {
+	  font-size: 20px;
+	  font-weight: 500;
+
+	  &.closed {
+		height: 100%;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $fuchsia;
+	  }
+	}
+  }
+}

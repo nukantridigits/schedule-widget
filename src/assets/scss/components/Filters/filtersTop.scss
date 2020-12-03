@@ -1,0 +1,55 @@
+@import '../../mixins&vars';
+
+#fitbase-widget {
+  &.desktop {
+	.filters_top {
+	  margin-bottom: 18px;
+	  .checkbox {
+		&_group {
+		  margin-top: 5px;
+		  display: flex;
+		  align-items: center;
+		}
+
+		&_wrapper {
+		  margin-right: 24px;
+
+		  &:last-of-type {
+			margin-right: 0;
+		  }
+		}
+	  }
+	  &:not(.sm) {
+		max-width: 1201px;
+	  }
+	}
+  }
+
+  &.desktop_sm {
+	.filters_top {
+	  padding-left: 25px;
+	  box-sizing: border-box;
+	  &:not(.sm) {
+		max-width: 1067px;
+		width: 94vw;
+	  }
+	}
+  }
+
+  .filters_top {
+	display: flex;
+	width: 100%;
+
+	&:not(.sm) {
+	  width: inherit;
+	}
+
+	.vs__dropdown-toggle {
+	  box-shadow: none;
+	}
+
+	.filter.v-select {
+	  box-shadow: none;
+	}
+  }
+}

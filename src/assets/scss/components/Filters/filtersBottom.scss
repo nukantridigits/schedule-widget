@@ -1,0 +1,52 @@
+@import '../../mixins&vars';
+@import './Bottom/BranchFilter/branchFilter';
+
+#fitbase-widget {
+  &.desktop_sm {
+	.filters_bottom {
+	  &:not(.sm) {
+		max-width: 1067px;
+	  }
+
+	  .checkbox {
+		&_wrapper {
+		  margin-right: 15px;
+		}
+	  }
+	}
+  }
+
+  .filters_bottom {
+	display: flex;
+	align-items: center;
+
+	&:not(.sm) {
+	  justify-content: space-between;
+	  width: 94vw;
+	  max-width: 1201px;
+	}
+
+	&_right {
+	  display: flex;
+	  align-items: center;
+	  position: relative;
+	  top: -9px;
+	}
+
+	.checkbox {
+	  &_group {
+		display: flex;
+		margin-right: 20px;
+		align-items: center;
+	  }
+
+	  &_wrapper {
+		margin-right: 24px;
+
+		&:last-of-type {
+		  margin-right: 0;
+		}
+	  }
+	}
+  }
+}

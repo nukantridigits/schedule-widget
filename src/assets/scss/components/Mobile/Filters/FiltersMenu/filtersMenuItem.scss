@@ -1,0 +1,19 @@
+@import "../../../../mixins&vars";
+
+#fitbase-widget {
+  &.dark {
+	.filters_menu_item {
+	  border-bottom-color: #333740;
+	  color: $white;
+	}
+  }
+
+  .filters_menu_item {
+	height: 45px;
+	border-bottom: 1px solid $grayAdditionalBadgeLight;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-right: 20px;
+  }
+}

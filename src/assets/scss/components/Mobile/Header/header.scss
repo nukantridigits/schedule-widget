@@ -1,0 +1,20 @@
+@import "../../../mixins&vars";
+@import "showFiltersButton";
+
+#fitbase-widget {
+  &.dark {
+	.header {
+	  background-color: $calendarInnerBgDark;
+	  border-bottom-color: $bgDark;
+	}
+  }
+
+  .header {
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 1px solid $grayAdditionalBadgeLight;
+	background-color: $white;
+  }
+}

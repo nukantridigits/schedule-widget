@@ -1,0 +1,32 @@
+@import "../../mixins&vars";
+
+#fitbase-widget {
+  .event {
+	&_transfer {
+	  &_top {
+		.icon_wrapper {
+		  display: flex;
+		  align-items: center;
+		}
+	  }
+
+	  &_bottom {
+		font-weight: 500;
+		font-size: 15px;
+		line-height: 22px;
+
+		&_time {
+		  display: flex;
+
+		  &_divider {
+			margin: 0 2px;
+		  }
+		}
+
+		&_date {
+		  margin-top: 5px;
+		}
+	  }
+	}
+  }
+}

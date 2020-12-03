@@ -1,0 +1,40 @@
+@import "../../../../mixins&vars";
+
+#fitbase-widget {
+  &.dark {
+	.filters_header {
+	  &_title {
+		color: $white;
+	  }
+	  .icon_wrapper{
+		path{
+		  fill: $white;
+		}
+	  }
+	}
+  }
+
+  .filters_header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 14px 0 24px;
+	height: 54px;
+	border-bottom: 1px solid $grayAdditionalBadgeLight;
+	box-sizing: border-box;
+	&_left {
+	  display: flex;
+	  align-items: center;
+	  height: inherit;
+	  position: relative;
+	}
+
+	&_back_btn {
+	  margin-right: 16px;
+	}
+
+	&_title {
+	  font-weight: 500;
+	}
+  }
+}

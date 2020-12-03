@@ -1,0 +1,137 @@
+@import '../../mixins&vars';
+
+#fitbase-widget {
+  &.desktop_sm {
+	.label_only {
+	  .checkbox_label {
+		font-size: 14px;
+		line-height: 14px;
+	  }
+	}
+
+	.checkbox {
+	  &_wrapper {
+		label {
+		  span {
+			width: 16px;
+			height: 16px;
+
+			&:after {
+			  left: 7px;
+			  height: 9px;
+			  width: 4px;
+			}
+		  }
+		}
+	  }
+	}
+  }
+
+  &.touch {
+	.label_only {
+	  margin-bottom: 16px;
+
+	  .checkbox_label {
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 15px;
+	  }
+
+	  &:last-of-type {
+		margin-bottom: 0;
+	  }
+	}
+  }
+
+  &.dark {
+	.checkbox_wrapper {
+	  label {
+		span {
+		  box-shadow: none;
+		  background-color: $calendarWrapperDark;
+		  border-color: $calendarWrapperDark;
+		}
+	  }
+	}
+
+	.checkbox_label {
+	  color: $white;
+	}
+  }
+
+  .checkbox {
+	&_wrapper {
+	  display: flex;
+	  align-items: center;
+
+	  .icon_wrapper {
+		display: flex;
+		align-items: center;
+	  }
+
+	  label {
+		position: relative;
+		margin-right: 10px;
+		cursor: pointer;
+
+		input[value="true"] {
+		  + span {
+			box-shadow: 1px 5px 14px rgba(60, 103, 214, 0.6);
+		  }
+		}
+
+		span {
+		  border-radius: 4px;
+		  width: 24px;
+		  height: 24px;
+		  border: 1px solid $grayAdditionalLight;
+		  display: inline-block;
+		  transition: all linear 0.1s;
+
+		  &:after {
+			content: "";
+			position: absolute;
+			top: 3px;
+			left: 8px;
+			height: 11px;
+			width: 6px;
+			border-bottom: 2px solid $white;
+			border-right: 2px solid $white;
+			transform: rotate(45deg);
+			visibility: hidden;
+		  }
+		}
+
+		input {
+		  display: none;
+
+		  &:checked ~ span {
+			background: $blue;
+			border-color: $blue;
+
+			&:after {
+			  visibility: visible;
+			}
+		  }
+		}
+	  }
+	}
+
+	&_label {
+	  font-weight: 500;
+	  font-size: 16px;
+	  line-height: 16px;
+	  white-space: nowrap;
+	}
+  }
+
+
+  .checkbox_wrapper_small {
+	label {
+	  span {
+		width: 20px;
+		height: 20px;
+	  }
+	}
+  }
+}

@@ -1,0 +1,42 @@
+@import '../../mixins&vars';
+
+#fitbase-widget {
+  &.desktop {
+	.filter {
+	  &.v-select {
+		min-width: 245px;
+		max-width: 245px;
+		cursor: pointer;
+
+		&:hover {
+		  cursor: pointer;
+		}
+	  }
+	}
+  }
+
+  &.desktop_sm {
+	.filter {
+	  &.v-select {
+		min-width: 200px;
+		max-width: 200px;
+	  }
+	}
+  }
+
+  .filter {
+	&_wrapper {
+	  margin-right: 20px;
+	}
+
+	&.v-select {
+	  background-color: $white;
+	  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+	  border-radius: 6px;
+	}
+  }
+
+  input {
+	font-family: "SF Pro Display" !important;
+  }
+}

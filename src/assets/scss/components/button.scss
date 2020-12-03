@@ -1,0 +1,92 @@
+@import "../mixins&vars";
+
+#fitbase-widget {
+  &.desktop{
+	.btn {
+	  &-s {
+		padding: 12px 35px;
+		font-size: 16px;
+		line-height: 16px;
+	  }
+	}
+  }
+  &.desktop_sm {
+	.btn {
+	  &-s {
+		padding: 12px 20px;
+		font-size: 14px;
+		line-height: 14px;
+	  }
+	}
+  }
+
+  &.dark {
+	.btn {
+	  background-color: $calendarWrapperDark;
+	  color: $white;
+	}
+  }
+
+  .btn {
+	border: 0;
+	cursor: pointer;
+	outline: none;
+
+	&-nowrap {
+	  white-space: nowrap;
+	}
+
+	&:disabled {
+	  transition: .3s;
+	  cursor: default;
+
+	  &:hover {
+		box-shadow: none;
+	  }
+	}
+
+	&:hover {
+	  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+	  transition: .3s;
+	}
+
+	&.branch_filter_roll_item:hover {
+	  box-shadow: none;
+	}
+
+	&-blue {
+	  background-color: $blue;
+	  color: $white;
+
+	  &:disabled {
+		background-color: $disabledBlue;
+	  }
+	}
+
+	&-white {
+	  background-color: $white;
+	  color: $black;
+
+	  &.selected {
+		background-color: $blue;
+		color: $white;
+	  }
+	}
+
+	&-s {
+	  padding: 9px 25px;
+	  font-weight: 500;
+	  font-size: 17px;
+	  line-height: 17px;
+	  border-radius: 55px;
+	}
+
+	&-m {
+	  font-weight: 500;
+	  font-size: 15px;
+	  line-height: 15px;
+	  border-radius: 55px;
+	  padding: 16px 35px;
+	}
+  }
+}

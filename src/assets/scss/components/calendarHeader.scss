@@ -1,0 +1,32 @@
+#fitbase-widget {
+  &.desktop {
+	.calendar {
+	  &_nav {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		padding: 0 10px 0 75px;
+		margin-top: -20px;
+
+		&_btn {
+		  cursor: pointer;
+
+		  &_prev {
+			margin-right: auto;
+		  }
+		  &_next{
+			margin-left: auto;
+		  }
+		}
+	  }
+	}
+  }
+
+  &.desktop_sm {
+	.calendar {
+	  &_nav {
+		padding-left: 68px;
+	  }
+	}
+  }
+}

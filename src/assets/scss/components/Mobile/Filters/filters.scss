@@ -1,0 +1,42 @@
+@import "../../../mixins&vars";
+@import "clubFilter";
+@import "FiltersHeader/filtersHeader";
+@import "FiltersMenu/filtersMenu";
+
+#fitbase-widget {
+  &.dark {
+	&.touch {
+	  .filters {
+		background-color: $calendarInnerBgDark;
+
+		.link_text {
+		  color: $blue;
+		}
+	  }
+	}
+  }
+
+  &.touch {
+	.filter {
+	  &_control {
+		display: flex;
+		justify-content: space-between;
+	  }
+	}
+
+	.filters {
+	  position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  right: 0;
+	  width: 78.8vw;
+	  background: $white;
+	  //background-attachment: fixed;
+	  //height: 100vh;
+	  min-height: 100vh;
+	  z-index: 2147483646;
+	  font-size: 17px;
+	  overflow-x: hidden;
+	}
+  }
+}

@@ -1,0 +1,152 @@
+@import "../../../../mixins&vars";
+
+#fitbase-widget {
+  &.dark {
+	.days_traveller_wrapper {
+	  background: $calendarInnerBgDark;
+	}
+
+	.days_traveller_wrapper {
+	  .days_traveller {
+		.day_item {
+		  &.active {
+			.day_item {
+			  &_label {
+				color: $white;
+			  }
+			}
+		  }
+		}
+	  }
+	}
+  }
+
+  &.mob {
+	&:not(.mob_m) {
+	  .days_traveller {
+		margin: 0 6px;
+
+		.day_item {
+		  &_number {
+			width: 30px;
+			height: 34px;
+			font-size: 14px;
+		  }
+		}
+	  }
+	}
+  }
+
+  .days_traveller {
+	overflow-x: hidden;
+	display: flex;
+	z-index: 1;
+	padding-bottom: 10px;
+	margin: 0 10px;
+
+	&_week {
+	  min-width: 100%;
+	  display: flex;
+	  justify-content: space-between;
+	  transform: translateX(100%);
+	  transition: transform .5s ease-out;
+
+	  &.firstWeek {
+		&.active {
+		  transform: translateX(0%);
+		}
+	  }
+
+	  &.secondWeek {
+		&.active {
+		  transform: translateX(-100%);
+		}
+	  }
+	}
+
+	&_wrapper {
+	  background: $white;
+	  margin-bottom: 18px;
+	}
+
+	.day_item {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: space-between;
+	  height: 66px;
+	  color: $grayMainLight;
+	  cursor: pointer;
+	  &_number {
+		width: 38px;
+		height: 38px;
+		font-size: 15px;
+		border-radius: 4px;
+		background-color: $dayItemBg;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	  }
+
+	  &_label {
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 13px;
+	  }
+
+	  &.today {
+		.day_item {
+		  &_number {
+			background-color: rgba(158, 181, 231, .8);
+			color: $white;
+		  }
+		}
+
+		&.active {
+		  .day_item {
+			&_number {
+			  background-color: $blue;
+			  color: $white;
+			}
+
+			&_label {
+			  color: $blue;
+			}
+		  }
+		}
+	  }
+
+	  &.active {
+		.day_item {
+		  &_number {
+			background-color: $blue;
+			color: $white;
+		  }
+
+		  &_label {
+			color: $blue;
+		  }
+		}
+	  }
+	}
+
+	@media all and (min-width: 530px) and (max-width: #{$desktopWidth - 1px}) {
+	  &_week {
+		justify-content: center;
+	  }
+	  .day_item {
+		margin-right: 20px;
+		height: 80px;
+
+		&:last-of-type{
+		  margin-right: 0;
+		}
+
+		&_number {
+		  width: 50px;
+		  height: 50px;
+		  font-size: 16px;
+		}
+	  }
+	}
+  }
+}

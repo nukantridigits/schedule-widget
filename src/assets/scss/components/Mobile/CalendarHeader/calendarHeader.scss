@@ -1,0 +1,11 @@
+@import "src/assets/scss/mixins&vars";
+@import "DateTraveller/dateTraveller";
+@import "DaysTraveller/daysTraveller";
+
+#fitbase-widget {
+  &.dark{
+	.calendar_header{
+	  //background-color: $calendarInnerBgDark;
+	}
+  }
+}

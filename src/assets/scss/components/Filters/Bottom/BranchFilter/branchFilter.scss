@@ -1,0 +1,43 @@
+@import "././src/assets/scss/mixins&vars";
+@import "./branchFilterRoll";
+@import "./branchFilterRollMobile";
+
+#fitbase-widget {
+  &.desktop_sm {
+	.filters_bottom {
+	  &.sm {
+		.branch_filter {
+		  margin-right: 40px;
+		}
+	  }
+	}
+
+	.branch_filter {
+	  margin-left: 52px;
+	  margin-right: 50px;
+	}
+  }
+
+  &.desktop {
+	.branch_filter {
+	  margin-top: 12px;
+	  margin-right: 72px;
+	  position: relative;
+	  margin-left: 30px;
+	}
+
+	.filters_bottom {
+	  &:not(.sm) {
+		.branch_filter {
+		  width: 84%;
+		  margin-right: 50px;
+		  margin-left: 52px;
+		}
+
+		.branch_filter_plug {
+		  width: 84%;
+		}
+	  }
+	}
+  }
+}

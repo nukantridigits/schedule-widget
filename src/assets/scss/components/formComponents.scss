@@ -1,0 +1,98 @@
+@import "../mixins&vars";
+
+#fitbase-widget {
+  &.dark {
+	.vue-checkbox__label {
+	  color: $white;
+	}
+  }
+
+  .vue-checkbox-group {
+	display: flex;
+	flex-direction: column;
+
+	.vue-checkbox {
+	  font-size: 17px;
+	  display: flex;
+	  color: $black;
+	  width: 100%;
+	}
+
+	.vue-checkbox--checked {
+	  color: $black
+	}
+
+	.vue-checkbox--checked .vue-checkbox__inner {
+	  &:after {
+		content: "";
+		position: absolute;
+		right: 0;
+		top: calc(50% - 11px);
+		height: 11px;
+		width: 6px;
+		border-bottom: 2px solid $blue;
+		border-right: 2px solid $blue;
+		transform: rotate(45deg);
+	  }
+	}
+
+	.vue-checkbox__label {
+	  width: 100%;
+	}
+
+	.vue-checkbox__inner {
+	  position: absolute;
+	  right: 0;
+	  top: 0;
+	  height: 100%;
+	  display: flex;
+	  align-items: center;
+	  width: 16px;
+	}
+
+	.vue-checkbox input {
+	  display: none
+	}
+  }
+
+
+  .filter_wrapper {
+	div.vue-checkbox {
+	  width: 100%;
+	  position: relative;
+	  word-break: break-word;
+	  display: flex;
+	  padding: 10px 0;
+	  align-items: center;
+	  border-bottom: 1px solid $grayAdditionalBadgeLight;
+	  overflow: hidden;
+	  text-align: left;
+
+	  &:last-of-type {
+		margin-bottom: 50px;
+	  }
+	}
+
+	.vue-radio input[type=radio] {
+	  display: none;
+	}
+
+	.vue-radio {
+	  position: relative;
+	}
+
+	.vue-radio--checked {
+	  &::after {
+		content: "";
+		position: absolute;
+		top: 14px;
+		right: 0;
+		height: 11px;
+		width: 6px;
+		border-bottom: 2px solid #3C67D6;
+		border-right: 2px solid #3C67D6;
+		transform: rotate(45deg);
+	  }
+	}
+  }
+}

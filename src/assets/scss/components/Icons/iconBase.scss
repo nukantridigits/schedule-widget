@@ -1,0 +1,36 @@
+@import "../../mixins&vars";
+
+#fitbase-widget {
+  &.touch {
+	.label_only {
+	  .icon_description {
+		font-size: 15px;
+		font-weight: 400;
+		margin-top: 0;
+	  }
+	}
+
+	.icon {
+	  &_divider {
+		height: 10px;
+	  }
+	}
+
+	&_description {
+	  font-weight: 500;
+	  font-size: 13px;
+	  line-height: 13px;
+	  margin-top: 2px;
+	}
+  }
+
+  .icon_divider {
+	width: 10px;
+  }
+
+  svg {
+	vertical-align: baseline;
+	margin-bottom: -2px;
+	display: flex;
+  }
+}
