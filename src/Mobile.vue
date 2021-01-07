@@ -33,7 +33,8 @@ import {POSITION_WINDOW, POSITION_CALENDAR} from "./variables";
 export default {
 	name: "Mobile",
 	components: {
-		CalendarHeader, Fade, Modal, Preloader, Header,	Filters,
+		CalendarHeader,
+		Fade, Modal, Preloader, Header,	Filters,
 		Calendar
 	},
 	extends: Desktop,

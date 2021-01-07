@@ -3,7 +3,7 @@
 		id="fitbase-widget"
 		ref="fitbaseWidget"
 		:class="{
-			touch : isTouchDevice,
+			touch: isTouchDevice,
 			mob: isMobilePhone,
 			mob_m: isMediumMobilePhone,
 			desktop: !isTouchDevice,

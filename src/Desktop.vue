@@ -38,7 +38,6 @@ export default {
 	created() {
 		this.POSITION_WINDOW = POSITION_WINDOW;
 		this.POSITION_CALENDAR = POSITION_CALENDAR;
-
 		this.$store.dispatch('ui/setAppInitialized');
 	},
 	methods: {

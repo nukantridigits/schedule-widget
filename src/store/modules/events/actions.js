@@ -22,7 +22,6 @@ export default {
 				commit(Mutation.INCREASE_EVENTS_COUNTER);
 				commit('ui/HIDE_EVENTS_PRELOADER', null, { root: true })
 				eventBus.$emit('showCalendar');
-				return true
 			}, (err) => {
 				console.log(err)
 				commit('ui/HIDE_EVENTS_PRELOADER', null, { root: true })

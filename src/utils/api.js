@@ -1,7 +1,6 @@
 const controllerUrl = `schedule-fitbase-widget`;
 
-export const getEventsUrl = (payload) => {
-	const {start, end, filter, apiUrl} = payload;
+export const getEventsUrl = ({start, end, filter, apiUrl}) => {
 	const {
 		clubFilter, trainerFilter, scheduleTemplateFilter, placeFilter,
 		branchFilter, onlineFilter, registrationFilter, payFilter
@@ -33,32 +32,26 @@ export const getEventsUrl = (payload) => {
 
 	return url;
 }
-export const getActiveEventUrl = (payload) => {
-	const {eventId, apiUrl} = payload;
+export const getActiveEventUrl = ({eventId, apiUrl}) => {
 	return `${apiUrl}/${controllerUrl}/get-event-info?eventId=${eventId}`;
 }
 
-export const getRegistrationRequestUrl = (payload) => {
-	const {eventId, phoneNumber, clubId, apiUrl} = payload;
+export const getRegistrationRequestUrl = ({eventId, phoneNumber, clubId, apiUrl}) => {
 	return `${apiUrl}/${controllerUrl}/registration-request?eventId=${eventId}&phoneNumber=${phoneNumber}&clubId=${clubId}`;
 }
 
-export const getClubFilterOptionsUrl = (payload) => {
-	const {apiUrl} = payload;
+export const getClubFilterOptionsUrl = ({apiUrl}) => {
 	return `${apiUrl}/${controllerUrl}/get-club-filter-options`;
 }
 
-export const getFilterOptionsUrl = (payload) => {
-	const {dateStart, viewName, clubId, apiUrl} = payload;
+export const getFilterOptionsUrl = ({dateStart, viewName, clubId, apiUrl}) => {
 	return `${apiUrl}/${controllerUrl}/get-filters?viewName=${viewName}&dateStart=${dateStart}&clubId=${clubId}`;
 }
 
-export const getScheduleNextWeekUrl = (payload) => {
-	const {apiUrl, clubId} = payload;
+export const getScheduleNextWeekUrl = ({apiUrl, clubId}) => {
 	return `${apiUrl}/${controllerUrl}/get-last-schedule?clubId=${clubId}`;
 }
 
-export const getPhoneMaskUrl = (payload) => {
-	const {apiUrl} = payload;
+export const getPhoneMaskUrl = ({apiUrl}) => {
 	return `${apiUrl}/${controllerUrl}/get-phone-mask-setting`;
 }
