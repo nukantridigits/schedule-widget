@@ -278,7 +278,7 @@ export default {
 				if (this.positionedEvents === this.events.length) {
 					this.appendCalendarNavToFcToolbar();
 					this.initTimegridSlots();
-					setTimeout(reformatSkeleton, 190);
+					reformatSkeleton();
 				}
 			}
 		},

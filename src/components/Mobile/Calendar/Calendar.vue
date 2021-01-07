@@ -29,14 +29,10 @@ export default {
     },
     extends: Calendar,
     created() {
-        eventBus.$on('gotToDate', (payload)=> {
-            const {date} = payload;
-            setTimeout(() => {
-                const calendar = this.getCalendar();
-                this.setTimeEdges(date);
-                calendar.gotoDate(date);
-            });
-
+        eventBus.$on('gotToDate', ({date})=> {
+            const calendar = this.getCalendar();
+            this.setTimeEdges(date);
+            calendar.gotoDate(date);
         });
     },
     computed: {

@@ -107,7 +107,7 @@ export default {
 			shadowRoot.appendChild(fontFaceStyle);
 		});
 
-		setTimeout(this.screenDispatcher,0)
+		this.screenDispatcher();
 		//при изменении ширины экрана - по необходимости, переключаем компонент Mobile/Desktop
 		window.addEventListener("resize", this.onWindowResizeHandler);
 		this.setFirstWeekIsActive();
